@@ -1,0 +1,38 @@
+name: Generate Weekly Menu
+
+on:
+  schedule:
+    - cron: "0 17 * * 5"   # 18:00 CET (approx, no DST handling)
+  workflow_dispatch:        # allow manual trigger
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+
+      - name: Install dependencies
+        run: |
+          python -m pip install --upgrade pip
+          pip install openai
+
+      - name: Run menu generator
+        env:
+          OPENAI_API_KEY: ${{ secrets.OPENAI_API_KEY }}
+        run: |
+          python generate_menu.py
+
+      - name: Commit and push changes
+        run: |
+          git config --global user.name "github-actions"
+          git config --global user.email "github-actions@github.com"
+          git add output_*.txt menu_history.json
+          git commit -m "Weekly menu update" || echo "No changes to commit"
+          git push
