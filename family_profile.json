@@ -1,0 +1,59 @@
+{
+  "family_size": 4,
+  "country": "Sweden",
+  "constraints": {
+    "fish_per_week": "1-2",
+    "soup_per_week": 1,
+    "cook_from_scratch_per_week": 1,
+    "max_weekday_time_minutes": 45
+  },
+  "adults": {
+    "person1": {
+      "diet": "omnivore",
+      "avoids": [
+        "coriander"
+      ]
+    },
+    "person2": {
+      "diet": "pescatarian_ovo_vegetarian",
+      "avoids": [
+        "beef",
+        "pork",
+        "lamb",
+        "chicken",
+        "red_meat"
+      ],
+      "likes": [
+        "coriander"
+      ]
+    }
+  },
+  "children": {
+    "child1": {
+      "likes": [
+        "pizza",
+        "burgers",
+        "sausage",
+        "pasta",
+        "sushi",
+        "risotto",
+        "soups"
+      ],
+      "avoids": [
+        "rice"
+      ],
+      "notes": "prefers components separated"
+    },
+    "child2": {
+      "likes": [
+        "pizza",
+        "burgers",
+        "sausage",
+        "pasta",
+        "rice",
+        "sushi"
+      ],
+      "notes": "prefers mild food"
+    }
+  }
+}
