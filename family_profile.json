@@ -11,9 +11,7 @@
     "person1": {
       "diet": "omnivore",
       "avoids": [
-        "coriander",
-        "paprika",
-        "tofu"
+        "coriander"
       ]
     },
     "person2": {
@@ -23,7 +21,9 @@
         "pork",
         "lamb",
         "chicken",
-        "red_meat"
+        "red_meat",
+        "paprika",
+        "tofu"
       ],
       "likes": [
         "coriander"
