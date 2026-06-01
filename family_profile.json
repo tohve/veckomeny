@@ -11,7 +11,9 @@
     "person1": {
       "diet": "omnivore",
       "avoids": [
-        "coriander"
+        "coriander",
+        "paprika",
+        "tofu"
       ]
     },
     "person2": {
@@ -42,7 +44,7 @@
       "avoids": [
         "rice"
       ],
-      "notes": "prefers components separated"
+      "notes": "is curious"
     },
     "child2": {
       "likes": [
